@@ -34,7 +34,7 @@ export default function Todo() {
       <ul>
         {
           todos.map(todo => (
-            <StyledTodo onClick={() => toggle(todo.id)} $complete={todo.complete} key={todo.id}>
+            <StyledTodo $complete={todo.complete} key={todo.id}>
               <span>{todo.name}{todo.complete && ' ✔️'}</span>
             </StyledTodo>
           ))
