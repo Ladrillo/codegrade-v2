@@ -2,9 +2,9 @@ import React from 'react'
 import { render, waitFor, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
-import server from '../../../backend/mock-server'
-import { resetTodos } from '../../../backend/helpers'
-import Todo from '../Todo'
+import server from './backend/mock-server'
+import { resetTodos } from './backend/helpers'
+import Todo from './frontend/components/Todo'
 
 // troubleshooting MSW
 // server.events.on('request:start', ({ request }) => {
@@ -46,3 +46,4 @@ describe('Todo component', () => {
     expect(await screen.findByText('laundry ✔️', queryOptions, waitForOptions)).toBeVisible()
   })
 })
+// test
