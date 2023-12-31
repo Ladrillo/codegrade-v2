@@ -39,11 +39,13 @@ describe('Todo component', () => {
       expect(screen.getByText(/groceries/, queryOptions)).toBeVisible()
     }, waitForOptions)
   })
-
   test('can do laundry', async () => {
     const user = userEvent.setup()
     await user.click(await screen.findByText(/laundry/, queryOptions, waitForOptions))
     expect(await screen.findByText('laundry ✔️', queryOptions, waitForOptions)).toBeVisible()
+  })
+  test('can do other stuff', async () => {
+    expect(false).toBe(true)
   })
 })
 // test
